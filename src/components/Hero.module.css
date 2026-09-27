@@ -1,0 +1,101 @@
+.hero {
+  background: var(--cream);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  align-items: center;
+  gap: clamp(2.5rem, 5vw, 4.5rem);
+  padding-block: clamp(3.5rem, 7vw, 6rem);
+}
+
+.title {
+  font-size: clamp(2.2rem, 5vw, 3.75rem);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  color: var(--green-900);
+}
+
+.accent {
+  color: var(--brass);
+}
+
+.lead {
+  margin-top: 0.9rem;
+  max-width: 32rem;
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  color: var(--ink-soft);
+}
+
+.points {
+  display: grid;
+  gap: 0.6rem;
+  margin: 1.35rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  color: var(--ink);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.check {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: 0.05em;
+  border-radius: 50%;
+  background: var(--gradient-brass);
+  color: var(--white);
+}
+
+.check svg {
+  width: 0.7rem;
+  height: 0.7rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+
+.actions :global(.btn) {
+  min-height: 2.65rem;
+  padding: 0.6rem 1.3rem;
+  font-size: 0.9rem;
+}
+
+.phone {
+  gap: 0.6rem;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    padding-block: 2rem 2.5rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .title {
+    font-size: 2.1rem;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+}

@@ -1,0 +1,161 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: linear-gradient(120deg, rgb(246 242 233 / 0.95) 0%, rgb(238 221 190 / 0.92) 60%, rgb(246 242 233 / 0.95) 100%);
+  backdrop-filter: saturate(140%) blur(10px);
+  -webkit-backdrop-filter: saturate(140%) blur(10px);
+  border-bottom: 1px solid rgb(217 183 122 / 0.4);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 4.5rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2.25rem;
+}
+
+.nav ul {
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav ul a {
+  font-size: 0.93rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav ul a:hover {
+  color: var(--ink);
+}
+
+.cta {
+  min-height: 2.6rem;
+  padding: 0.5rem 1.2rem;
+}
+
+.mobileActions {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mobileCta {
+  display: none;
+  min-height: 2.4rem;
+  padding: 0.45rem 1rem;
+  font-size: 0.88rem;
+}
+
+.toggle {
+  display: none;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin-right: -0.5rem;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: var(--ink);
+}
+
+.bars,
+.bars::before,
+.bars::after {
+  display: block;
+  width: 1.3rem;
+  height: 1.5px;
+  margin-inline: auto;
+  background: currentColor;
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+
+.bars {
+  position: relative;
+}
+
+.bars::before,
+.bars::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.bars::before {
+  top: -6px;
+}
+
+.bars::after {
+  top: 6px;
+}
+
+.bars[data-open="true"] {
+  background: transparent;
+}
+
+.bars[data-open="true"]::before {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.bars[data-open="true"]::after {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+@media (max-width: 880px) {
+  .mobileActions {
+    display: flex;
+  }
+
+  .mobileCta {
+    display: inline-flex;
+  }
+
+  .toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav {
+    position: absolute;
+    inset: 100% 0 auto 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.25rem;
+    padding: 1.25rem var(--gutter) 1.75rem;
+    background: var(--cream);
+    border-bottom: 1px solid var(--line);
+    display: none;
+  }
+
+  .navOpen {
+    display: flex;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nav ul a {
+    display: block;
+    padding: 0.8rem 0;
+    font-size: 1.05rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .cta {
+    min-height: 3rem;
+  }
+}

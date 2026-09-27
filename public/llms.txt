@@ -1,0 +1,34 @@
+# MosqueAI
+
+> MosqueAI is a 24/7 AI phone receptionist for UK mosques. It answers routine enquiries, passes urgent calls (such as janazah arrangements) straight to a real person, sends the committee a text summary after every call, and gives volunteers their time back.
+
+MosqueAI is built by Simply Genius AI, based in Manchester, UK. It is a paid service sold to mosque committees, not a mosque's own website — it does not display prayer times or accept donations itself.
+
+## Key facts
+
+- Phone: +44 7974 457772
+- Location: Manchester, UK
+- Website: https://mosqueai.co.uk
+- Setup time: most mosques are live within one to two weeks
+- Languages: English, Arabic, Urdu, Bengali and others, depending on the caller
+- Contract: no long-term contract, month to month, cancel any time
+
+## What it does
+
+- Answers routine questions: prayer times, Jumu'ah, madrasah, parking and directions
+- Routes urgent calls (janazah, emergencies) straight to a nominated person on the committee
+- Sends a text summary after every call: who rang, what they needed, what happens next
+- Filters out sales and spam calls before they reach the committee
+- Routes new Muslim enquiries and fiqh questions to the Imam or coordinator
+- Answers after Isha and on Eid, when no one is in the office
+- Handles several calls at once during busy periods (Ramadan, Jumu'ah)
+- Is trained only on the mosque's own approved information, so answers are consistent
+
+## Pages
+
+- [Home](https://mosqueai.co.uk/): overview, how it works, pricing enquiry
+- [Contact](https://mosqueai.co.uk/contact): enquiry form for mosque committees
+
+## Contact
+
+Committees interested in MosqueAI should call +44 7974 457772 or use the contact form at https://mosqueai.co.uk/contact.

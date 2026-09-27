@@ -1,0 +1,55 @@
+.head {
+  max-width: 44rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  overflow: hidden;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.item:hover {
+  border-color: var(--line-strong, var(--line));
+  box-shadow: var(--shadow-card);
+}
+
+.itemMedia {
+  position: relative;
+  aspect-ratio: 4 / 3;
+}
+
+.itemPhoto {
+  object-fit: cover;
+}
+
+.itemBody {
+  padding: 1.1rem 1.2rem 1.35rem;
+}
+
+.itemBody h3 {
+  font-size: 0.98rem;
+}
+
+.itemBody p {
+  margin-top: 0.4rem;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 460px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

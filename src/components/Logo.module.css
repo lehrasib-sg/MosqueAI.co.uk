@@ -1,0 +1,39 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+}
+
+.text {
+  display: grid;
+  line-height: 1;
+}
+
+.name {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.credit {
+  margin-top: 0.3rem;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--ink-muted);
+}
+
+.light .credit {
+  color: rgb(246 242 233 / 0.55);
+}
+
+.dark {
+  color: var(--green-800);
+}
+
+.light {
+  color: var(--cream);
+}

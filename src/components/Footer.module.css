@@ -1,0 +1,64 @@
+.footer {
+  background: #071f18;
+  color: rgb(246 242 233 / 0.7);
+  font-size: 0.93rem;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 2.5rem;
+  padding-block: 4rem 3rem;
+}
+
+.brand p {
+  max-width: 22rem;
+  margin-top: 1rem;
+}
+
+.links {
+  display: grid;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer a {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.links a:hover,
+.contact a:hover {
+  color: var(--cream);
+}
+
+.contact {
+  display: grid;
+  align-content: start;
+  gap: 0.6rem;
+  font-style: normal;
+}
+
+.contact a {
+  color: var(--cream);
+  font-weight: 500;
+}
+
+.bottom {
+  padding-block: 1.5rem;
+  border-top: 1px solid rgb(246 242 233 / 0.1);
+  font-size: 0.84rem;
+  color: rgb(246 242 233 / 0.5);
+}
+
+@media (max-width: 760px) {
+  .inner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .brand {
+    grid-column: 1 / -1;
+  }
+}

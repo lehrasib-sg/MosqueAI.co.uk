@@ -1,0 +1,219 @@
+:root {
+  --ink: #14211c;
+  --ink-soft: #4a5a53;
+  --ink-muted: #6f7d76;
+  --green-900: #0a2e24;
+  --green-800: #0e3b2e;
+  --green-700: #155240;
+  --green-100: #e3ece6;
+  --brass: #a87b35;
+  --brass-soft: #d9b77a;
+  --brass-deep: #8a6427;
+  --cream: #f6f2e9;
+  --paper: #fbf9f4;
+  --line: #e2dbcc;
+  --white: #ffffff;
+
+  --radius: 10px;
+  --wrap: 1180px;
+  --gutter: clamp(1.25rem, 4vw, 2.5rem);
+  --section-y: clamp(4.5rem, 10vw, 7.5rem);
+
+  --shadow-card: 0 1px 2px rgb(20 33 28 / 0.04), 0 8px 24px rgb(20 33 28 / 0.06);
+
+  --gradient-brass: linear-gradient(160deg, #c1904a 0%, var(--brass) 50%, var(--brass-deep) 100%);
+  --gradient-brass-hover: linear-gradient(160deg, #cc9a52 0%, #b3843c 50%, #94702c 100%);
+  --gradient-green: linear-gradient(135deg, var(--green-700) 0%, var(--green-900) 100%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans), system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: var(--font-display), Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+
+h3 {
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  line-height: 1.35;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+:focus-visible {
+  outline: 2px solid var(--brass);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--wrap);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.section {
+  padding-block: var(--section-y);
+}
+
+.section-head {
+  max-width: 40rem;
+  margin-bottom: clamp(2.5rem, 6vw, 4rem);
+}
+
+.section-head h2 {
+  font-size: clamp(2rem, 4.2vw, 3rem);
+}
+
+.section-head > p {
+  margin-top: 1.1rem;
+  font-size: 1.075rem;
+  color: var(--head-sub, var(--ink-soft));
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 3rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-primary {
+  position: relative;
+  background: var(--gradient-brass);
+  color: var(--white);
+  border-color: rgb(90 63 20 / 0.25);
+  text-shadow: 0 1px 1px rgb(10 30 24 / 0.25);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.45),
+    inset 0 -2px 3px rgb(90 63 20 / 0.3),
+    0 4px 0 var(--brass-deep),
+    0 10px 18px -6px rgb(138 100 39 / 0.55);
+  transition: background 0.2s ease, box-shadow 0.12s ease, transform 0.12s ease;
+}
+
+.btn-primary:hover {
+  background: var(--gradient-brass-hover);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.5),
+    inset 0 -2px 3px rgb(90 63 20 / 0.3),
+    0 5px 0 var(--brass-deep),
+    0 14px 22px -6px rgb(138 100 39 / 0.6);
+  transform: translateY(-2px);
+}
+
+.btn-primary:active {
+  transform: translateY(3px);
+  box-shadow:
+    inset 0 1px 3px rgb(90 63 20 / 0.4),
+    0 1px 0 var(--brass-deep),
+    0 2px 6px rgb(90 63 20 / 0.35);
+}
+
+.btn-outline {
+  border-color: var(--line);
+  color: var(--ink);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  border-color: var(--ink);
+}
+
+.btn-light {
+  background: var(--cream);
+  color: var(--green-900);
+}
+
+.btn-light:hover {
+  background: var(--white);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 100;
+  padding: 0.6rem 1rem;
+  background: var(--green-900);
+  color: var(--white);
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
